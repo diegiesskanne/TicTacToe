@@ -1,7 +1,5 @@
 package TicTacToe
 
-import com.sun.xml.internal.fastinfoset.util.StringArray
-
 var playground = Array(3) {Array(3) {" "} }
 
 class Playground() {
