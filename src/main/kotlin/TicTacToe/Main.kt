@@ -11,7 +11,7 @@ var player1inputs: MutableList<String> = mutableListOf<String>()
 var player2inputs: MutableList<String> = mutableListOf<String>()
 var finished: Boolean = false
 var winner: Player? = null
-val winlists: List<List<String>> = listOf(listOf("a1", "a2", "a3"), listOf("b1", "b2", "b3"), listOf("c1", "c2", "c3"), listOf("a1", "b1", "c1"), listOf("a2", "b2", "b2"), listOf("a3", "b3", "c3"), listOf("a1", "b2", "c3"), listOf("a3", "b2", "c1"))
+val winlists: List<List<String>> = listOf(listOf("a1", "a2", "a3"), listOf("b1", "b2", "b3"), listOf("c1", "c2", "c3"), listOf("a1", "b1", "c1"), listOf("a2", "b2", "c2"), listOf("a3", "b3", "c3"), listOf("a1", "b2", "c3"), listOf("a3", "b2", "c1"))
 val validcombinations: List<String> = listOf("a1", "a2", "a3", "b1", "b2", "b3", "c1", "c2", "c3", "m")
 
 class Main {
@@ -21,6 +21,7 @@ class Main {
     fun main() {
         var player1: Player = Player(namef, "X")
         var player2: Player = Player(names, "O")
+
         if(scorep1 == 0 && scorep2 == 0) {
             println("Wilkommen bei TictacToe")
             println("Wie heisst Spieler1: ")
@@ -62,7 +63,7 @@ class Main {
             winner == player1 -> scorep1++
             winner == player2 -> scorep2++
         }
-        println("The new Score is ${player1.name} $scorep1 - ${player2.name} $scorep2")
+        println("The new Score is ${player1.name} $scorep1 - $scorep2 ${player2.name}")
         newgame()
     }
 
